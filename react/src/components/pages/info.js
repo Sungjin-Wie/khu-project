@@ -80,7 +80,7 @@ const Info = () => {
                       : data.jobGrowName}
                   </CardText>
                   <Button color="info">
-                    <Link to="/df" className="text-white">
+                    <Link to="/" className="text-white">
                       돌아가기
                     </Link>
                   </Button>

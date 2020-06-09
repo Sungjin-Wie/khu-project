@@ -14,8 +14,8 @@ const Navigation = () => {
   const css = useStyles();
   return (
     <div className={css.wrapper}>
-      <Button href="#/df">Home</Button>
-      <Button href="#/df/auction">경매장</Button>
+      <Button href="#/">Home</Button>
+      <Button href="#/auction">경매장</Button>
     </div>
   );
 };

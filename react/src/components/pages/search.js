@@ -75,7 +75,7 @@ const Search = () => {
   }, []);
 
   const handleClick = c => {
-    history.push(`/df/info/${c.serverId}/${c.characterId}`);
+    history.push(`/info/${c.serverId}/${c.characterId}`);
   };
 
   return (
