@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Home, Search, Auction, Info } from "./components/pages";
+import { Navigation } from "./components/lib";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 
-function App() {
+const useStyles = makeStyles({
+  app: {
+    maxWidth: 1200,
+    display: "flex",
+    flexDirection: "column",
+    height: "100vh",
+    alignItems: "center",
+    margin: "0 auto",
+  },
+});
+
+const App = () => {
+  const css = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={css.app}>
+      <Navigation />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/searchresult/:server/:name" component={Search} />
+          <Route path="/info/:server/:id" component={Info} />
+          <Route path="/auction" component={Auction} />
+        </Switch>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
