@@ -4,7 +4,7 @@ import { fetchAuction } from "../lib/actions";
 import { Input, Button } from "@material-ui/core";
 import Loader from "react-loader-spinner";
 import { makeStyles } from "@material-ui/core/styles";
-import { Spinner, Container, Row, Col, Table } from "reactstrap";
+import { Table } from "reactstrap";
 
 const useStyles = makeStyles({
   wrapper: { textAlign: "center" },
@@ -69,10 +69,7 @@ const Auction = () => {
           <Loader type="ThreeDots" color="#00ccff" height="100" width="100" />
         </div>
       ) : isEmpty ? (
-        <div className={css.result}>
-          검색 결과가 없습니다.
-          <pre>{JSON.stringify(data, null, 2)}</pre>
-        </div>
+        <div className={css.result}>검색 결과가 없습니다.</div>
       ) : (
         <div className={css.result}>
           <Table>

@@ -11,6 +11,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 const logger = createLogger();
+
 const store = createStore(reducer, {}, applyMiddleware(logger, ReduxThunk));
 
 ReactDOM.render(

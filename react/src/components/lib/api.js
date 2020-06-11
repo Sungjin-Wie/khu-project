@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 export const key = "http://khu-project.herokuapp.com/";
-const url = "https://asia-northeast1-df-server.cloudfunctions.net/";
 
 export let api;
 
